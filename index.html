@@ -148,11 +148,10 @@
             </ul>
   
             <!-- Login Button -->
-            <button onclick="displayLogin()"
-              class="font-bold text-xs md:text-sm lg:text-base bg-white text-brand px-5 py-2 rounded-full hover:bg-secondary hover:text-black"
-            >
-              Log In
-            </button>
+            <div id="navItem">
+              
+            </div>
+            
           </nav>
       </section>
     </header>
@@ -487,7 +486,7 @@
             <div class="flex flex-col items-center gap-5 mt-10">
               <img
                 class="h-32 w-32 rounded-full object-cover"
-                src="assets/user.png"
+                src="assets/team/profile-pic (1).png"
                 alt="Member image"
               />
               <!-- Content -->
@@ -496,7 +495,7 @@
                   <span class="text-brand">Fahim</span> Chowdhury
                 </h4>
                 <p text-base md:text-md lg:class="text-lg">
-                  Web Developer (Backend)
+                  Full Stack Developer
                 </p>
               </div>
             </div>
@@ -574,7 +573,7 @@
             <div
               class="hidden absolute left-5 right-5 top-1/2 lg:flex -translate-y-1/2 transform justify-between"
             >
-              <a href="#slide2" class="btn btn-circle">❮</a>
+              <a href="#slide1" class="btn btn-circle">❮</a>
               <a href="#slide2" class="btn btn-circle">❯</a>
             </div>
           </div>
@@ -633,14 +632,9 @@
             </div>
           </div>
         </div>
-        <!-- View More button -->
-        <div class="lg:hidden text-inter">
-          <button
-            class="font-bold text-md md:text-lg lg:text-2xl bg-black text-white px-8 md:px-10 py-3 md:py-4 rounded-full hover:bg-secondary hover:text-black"
-          >
-            View More
-          </button>
-        </div>
+
+       
+
       </section>
     </main>
     <footer class="bg-footer text-white mt-10">
@@ -708,5 +702,6 @@
     <script src="JS/navigation.js"></script>
     <script src="JS/book.js"></script>
     <script src="JS/signUp.js"></script>
+    <script src="/BackendCode/signup.js"></script>
   </body>
 </html>

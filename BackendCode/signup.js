@@ -83,8 +83,6 @@ const handleLogin = (event) => {
     event.preventDefault();
     const username = getinfo("login-username");
     const password = getinfo("login-password");
-    console.log(username);
-    console.log(password);
     if ((username, password)) {
 
         fetch("http://127.0.0.1:8000/reader/login/", {
@@ -94,7 +92,7 @@ const handleLogin = (event) => {
         })
             .then((res) => res.json())
             .then((data) => {
-                console.log(data)
+                // console.log(data)
                 if (data.token && data.user_id && data.reader_id) {
                     localStorage.setItem("token", data.token);
                     localStorage.setItem("user_id", data.user_id);
@@ -115,7 +113,7 @@ const handleLogin = (event) => {
 const handlelogOut = () => {
     const token = localStorage.getItem("token");
     console.log(token);
-    fetch("https://wander-stay-api.vercel.app/customer/logout/", {
+    fetch("http://127.0.0.1:8000/reader/login/", {
         method: "POST",
         headers: {
             Authorization: `Token ${token}`,
@@ -124,13 +122,34 @@ const handlelogOut = () => {
     })
         .then((res) => res.json())
         .then((data) => {
-            console.log(data);
+            // console.log(data);
             localStorage.removeItem("token");
             localStorage.removeItem("user_id");
-            localStorage.removeItem("customer_id");
-            // window.location.href = "login.html";
+            localStorage.removeItem("reader_id");
+            window.location.href = "login.html";
         });
 };
 
 
 
+
+// nav hidden button
+
+const token = localStorage.getItem("token");
+if (token) {
+    document.getElementById("navItem").innerHTML = `
+    
+    <button onclick="handlelogOut()"
+                class="font-bold text-xs md:text-sm lg:text-base bg-white text-brand px-5 py-2 rounded-full hover:bg-secondary hover:text-black">
+                LogOut
+              </button>
+  `;
+}
+else {
+    document.getElementById("navItem").innerHTML = `
+  <button onclick="displayLogin()"
+                class="font-bold text-xs md:text-sm lg:text-base bg-white text-brand px-5 py-2 rounded-full hover:bg-secondary hover:text-black">
+                Log In
+              </button>
+  `;
+}
