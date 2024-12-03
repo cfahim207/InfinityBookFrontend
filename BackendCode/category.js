@@ -1,5 +1,5 @@
 const loadCategory = () => {
-    fetch("http://127.0.0.1:8000/books/category/")
+    fetch("https://infinity-books-eight.vercel.app/books/category/")
         .then((res) => res.json())
         .then((data) => {
             console.log(data);

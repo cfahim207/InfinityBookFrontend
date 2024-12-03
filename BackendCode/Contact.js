@@ -8,7 +8,7 @@ const handlecontact = (event) => {
         name, phone, messages,
     };
     console.log(info);
-    fetch("http://127.0.0.1:8000/contact/", {
+    fetch("https://infinity-books-eight.vercel.app/contact/", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(info),

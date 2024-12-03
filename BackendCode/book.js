@@ -1,8 +1,8 @@
 const loadhotel = (findhotel) => {
     document.getElementById("booksContainer").innerHTML = "";
-    let url = "http://127.0.0.1:8000/books/list/"
+  let url = "https://infinity-books-eight.vercel.app/books/list/"
     if (findhotel) {
-        url = `http://127.0.0.1:8000/books/list/?category=${findhotel}`
+      url = `https://infinity-books-eight.vercel.app/books/list/?category=${findhotel}`
     }
     fetch(url)
         .then((res) => res.json())

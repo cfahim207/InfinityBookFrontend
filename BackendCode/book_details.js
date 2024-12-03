@@ -1,7 +1,7 @@
 const getparams = () => {
     const parm = new URLSearchParams(window.location.search).get("bookId");
     console.log(parm);
-    fetch(`http://127.0.0.1:8000/books/list/?id=${parm}`)
+  fetch(`https://infinity-books-eight.vercel.app/books/list/?id=${parm}`)
         .then((res) => res.json())
         .then((data) => {
             bookDetails(data);

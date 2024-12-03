@@ -41,7 +41,7 @@ const handleregistration = async (event) => {
             )
         ) {
 
-            fetch("http://127.0.0.1:8000/reader/register/", {
+            fetch("https://infinity-books-eight.vercel.app/reader/register/", {
                 method: "POST",
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify(info),
@@ -85,7 +85,7 @@ const handleLogin = (event) => {
     const password = getinfo("login-password");
     if ((username, password)) {
 
-        fetch("http://127.0.0.1:8000/reader/login/", {
+        fetch("https://infinity-books-eight.vercel.app/reader/login/", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify({ username, password }),
@@ -113,7 +113,7 @@ const handleLogin = (event) => {
 const handlelogOut = () => {
     const token = localStorage.getItem("token");
     // console.log(token);
-    fetch("http://127.0.0.1:8000/reader/login/", {
+    fetch("https://infinity-books-eight.vercel.app/reader/logout/", {
         method: "POST",
         headers: {
             Authorization: `Token ${token}`,
