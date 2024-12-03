@@ -112,7 +112,7 @@ const handleLogin = (event) => {
 
 const handlelogOut = () => {
     const token = localStorage.getItem("token");
-    console.log(token);
+    // console.log(token);
     fetch("http://127.0.0.1:8000/reader/login/", {
         method: "POST",
         headers: {
