@@ -31,6 +31,7 @@ const bookDetails = (details) => {
             <h5 class="text-md md:text-xl lg:text-2xl mt-3 mb-10">
               ${book.writer}
             </h5>
+            <p class="text-sm md:text-md lg:text-lg mt-3 mb-10">Published: ${book.published}</p>
             <p
               class="text-base md:text-lg lg:text-xl mt-5 lg:pr-5 text-justify lg:text-left mb-10"
             >

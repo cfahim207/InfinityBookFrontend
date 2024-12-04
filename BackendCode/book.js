@@ -29,7 +29,7 @@ const displayHotel = (books) => {
         div.classList.add("card", "card-compact","bg-brand")
         div.innerHTML = ` 
               <figure>
-                <img src=${book.image} alt="Book" />
+                <img class="w-1/2" src=${book.image} alt="Book" />
               </figure>
               <div
                 class="card-body py-20 text-white flex md:flex-row items-center justify-between"
@@ -37,6 +37,7 @@ const displayHotel = (books) => {
                 <div class="md:w-1/2">
                   <h2 class="card-title">${book.title}</h2>
                   <p>${book.writer}</p>
+                  
                 </div>
                 <button
                   class="font-semibold text-xs md:text-sm lg:text-base bg-white text-brand px-3 py-2 rounded-lg hover:bg-secondary hover:text-black"
